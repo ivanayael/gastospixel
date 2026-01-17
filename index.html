@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>GastoPixel Pro 👾</title>
+  </head>
+  <body>
+    <div id="app">
+            <div id="notification">
+              <div class="nes-balloon from-right is-dark">
+                  <p id="notif-text">¡Guardado!</p>
+              </div>
+            </div>
+
+      <div class="container nes-container is-rounded">
+          <h1>👾 GASTO PIXEL 👾</h1>
+          
+          <section class="nes-container with-title">
+              <h3 class="title" id="form-title">Nuevo Registro</h3>
+              
+              <label>Descripción</label>
+              <input type="text" id="desc" class="nes-input" placeholder="Ej: Sopaipillas">
+
+              <label>Monto ($)</label>
+              <input type="number" id="monto" class="nes-input" placeholder="1500">
+
+              <label>Categoría</label>
+              <div class="nes-select">
+                  <select id="categoria" class="nes-input" title="categoria">
+                      <option value="📦 Otros">Otros</option>
+                      <option value="🍎 Comida">Comida</option>
+                      <option value="🚌 Transporte">Transporte</option>
+                      <option value="🎮 Ocio">Ocio</option>
+                      <option value="💡 Servicios">Servicios</option>
+                  </select>
+              </div>
+
+              <button type="button" id="btn-guardar" onclick="guardarGasto()" class="nes-btn is-primary">¡Ahorrar!</button>
+              <button type="button" id="btn-cancelar" onclick="resetearFormulario()" class="nes-btn is-error">Cancelar</button>
+          </section>
+
+          <div id="total-container" class="total-box total-normal">
+              <span id="total-label">TOTAL ACUMULADO:</span><br>
+              <span id="total-monto">$0</span>
+          </div>
+
+          <section class="nes-container with-title" id="section-container">
+              <h3 class="title">Historial</h3>
+              <div id="lista-gastos"></div>
+          </section>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
+</body>
+</html>
